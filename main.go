@@ -30,9 +30,9 @@ func (s *Student) sayHello() {
 }
 
 func main() {
-	you := &Student{Human{"john", 18, "strong", "fast"}, "univ"}
-	me := &Human{"nao", 3, "weak", "slow"}
+	you := Student{Human{"john", 18, "strong", "fast"}, "univ"}
+	me := Human{"nao", 3, "weak", "slow"}
 
-	you.sayHello
-	me.sayHello
+	you.sayHello()
+	me.sayHello()
 }
