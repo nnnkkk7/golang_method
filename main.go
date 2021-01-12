@@ -26,10 +26,13 @@ func (h *Human) sayHello() {
 }
 
 func (s *Student) sayHello() {
-	fmt.Printf("I go to %s", s.school)
+	fmt.Printf("I go to %s, name:%s, age: %s, my power is %s, and speed is %s", s.school, s.name, s.age, s.power, s.speed)
 }
 
 func main() {
-	you := &Human{"john", 18, "strong", "fast"}
+	you := &Student{Human{"john", 18, "strong", "fast"}, "univ"}
+	me := &Human{"nao", 3, "weak", "slow"}
+
 	you.sayHello
+	me.sayHello
 }
